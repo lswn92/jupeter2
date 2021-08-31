@@ -1,0 +1,16 @@
+<button
+  mat-raised-button
+  color="primary"
+  (click)="onClick($event)"
+>
+  Display Timestamps
+</button>
+
+<div 
+    *ngFor="let item of timeStamps; let i = index"
+    [ngStyle]="{backgroundColor: i % 2 == 1 ? 'grey':'trnasparent'}"
+    >
+   <br> {{ i + 1 }} : {{ item }}
+</div>
+
+<!-- <p *ngIf="showOrNot">Code Korea is always with you.</p> -->
